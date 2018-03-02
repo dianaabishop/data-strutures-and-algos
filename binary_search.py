@@ -26,7 +26,7 @@ def iterative_binary_search(list_to_search, num_to_find):
 def recursive_binary_search(list_to_search, num_to_find, right, left=0):
 	middle = (left + right) / 2
 
-	if (left >= right):
+	if (left > right):
 		return -1
 	if num_to_find == list_to_search[middle]:
 		return middle
@@ -39,12 +39,12 @@ def recursive_binary_search(list_to_search, num_to_find, right, left=0):
 
 def main():
 	list_to_search = [1, 2,  3, 4, 5, 6, 10, 11, 29]
-	num_to_find = 11
+	num_to_find = 1
 
 	print "iterative: ", iterative_binary_search(list_to_search, num_to_find)
 
 	right = len(list_to_search) - 1
-	print "recursive: ", recursive_binary_search(list_to_search, num_to_find, right=right)
+	print "recursive: ", recursive_binary_search(list_to_search, num_to_find, right)
 
 
 if __name__ == '__main__':
